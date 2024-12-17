@@ -8,7 +8,7 @@ public class playerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Obtén el componente Animator del jugador
+        // Obtï¿½n el componente Animator del jugador
         animator = GetComponent<Animator>();
     }
 
@@ -20,13 +20,13 @@ public class playerMovement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");   // Teclas W/S o flechas arriba/abajo
 
         // Crear un vector para el movimiento
-        Vector2 moveDirection = new Vector2(moveX, moveY).normalized; // Normalizamos para que la velocidad sea constante en cualquier dirección
+        Vector2 moveDirection = new Vector2(moveX, moveY).normalized; // Normalizamos para que la velocidad sea constante en cualquier direcciï¿½n
 
         // Mover al jugador
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime); // 'Time.deltaTime' asegura que el movimiento sea independiente de la tasa de cuadros
 
-        // Si el jugador se está moviendo, activa la animación de caminar
-        if (moveDirection.magnitude > 0) // Si el jugador está moviéndose
+        // Si el jugador se estï¿½ moviendo, activa la animaciï¿½n de caminar
+        if (moveDirection.magnitude > 0) // Si el jugador estï¿½ moviï¿½ndose
         {
             animator.SetBool("isMoving", true);
 
@@ -34,7 +34,7 @@ public class playerMovement : MonoBehaviour
             animator.SetFloat("moveX", moveDirection.x);
             animator.SetFloat("moveY", moveDirection.y);
         }
-        else // Si no se está moviendo, activa la animación de estar quieto
+        else // Si no se estï¿½ moviendo, activa la animaciï¿½n de estar quieto
         {
             animator.SetBool("isMoving", false);
         }
