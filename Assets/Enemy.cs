@@ -3,12 +3,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
-    public GameObject deathEffect;
-
     public bool isHit = false;
-
     public float speed = 2f; // Velocidad de movimiento del enemigo
     public Transform player; // Referencia al transform del jugador
+    public GameObject coinPrefab; // Prefab de la moneda
 
     void Update()
     {
@@ -30,8 +28,13 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        // Instanciar la moneda en la posición actual del enemigo
+        if (coinPrefab != null)
+        {
+            Instantiate(coinPrefab, transform.position, Quaternion.identity); // Crea la moneda en la posición del enemigo
+        }
+
+        Destroy(gameObject); // Destruir el enemigo
     }
 
     void ResetHitState()

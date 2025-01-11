@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 1271597364664354315}
   - component: {fileID: -3409918777112027007}
   - component: {fileID: 6192254919807196108}
+  - component: {fileID: 6914878644541656792}
   m_Layer: 0
   m_Name: Enemy 0
   m_TagString: Untagged
@@ -116,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 6058581330953130683}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.0699997, y: 5.16, z: 0}
+  m_LocalPosition: {x: -82.37755, y: 0.59500957, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -264,3 +265,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &6914878644541656792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6058581330953130683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b5ad66852c7c840a7ff26e0f073968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  isHit: 0
+  speed: 2
+  player: {fileID: 5921787649616108760, guid: edab252d42059e94cba67f16c1b7496f, type: 3}
+  coinPrefab: {fileID: 4088299420659770211, guid: c6a76b580a164c944984da7abaa9f288, type: 3}
