@@ -4377,9 +4377,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6058581330953130683, guid: 309a46ede030c024589001cf45bf4252, type: 3}
+  player: {fileID: 0}
   spawnInterval: 1
   maxEnemies: 100
-  spawnAreaSize: {x: 10, y: 10}
+  spawnAreaSize: {x: 20, y: 20}
+  restrictionAreaSize: {x: 20, y: 20}
   spawnDuration: 60
 --- !u!1 &299600629
 GameObject:
