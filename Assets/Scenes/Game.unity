@@ -4380,6 +4380,7 @@ MonoBehaviour:
   spawnInterval: 1
   maxEnemies: 100
   spawnAreaSize: {x: 10, y: 10}
+  spawnDuration: 60
 --- !u!1 &299600629
 GameObject:
   m_ObjectHideFlags: 0
@@ -8704,6 +8705,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 242511221679205744, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.999962
+      objectReference: {fileID: 0}
+    - target: {fileID: 242511221679205744, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.008726558
+      objectReference: {fileID: 0}
+    - target: {fileID: 242511221679205744, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 665391108036616569, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.026
@@ -8743,6 +8756,14 @@ PrefabInstance:
     - target: {fileID: 665391108036616569, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582155259212449480, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582155259212449480, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4468698120124493869, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
       propertyPath: m_Name
@@ -13015,6 +13036,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &1011048707 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 665391108036616569, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
+  m_PrefabInstance: {fileID: 552611531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1089732297
 GameObject:
   m_ObjectHideFlags: 0
@@ -13401,7 +13427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdf580f675954474d8107312fa4f884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1011048707}
   followSpeed: 5
   minSize: 5
   maxSize: 10

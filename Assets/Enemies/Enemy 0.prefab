@@ -209,7 +209,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6058581330953130683}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -224,10 +224,10 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &6192254919807196108
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -280,5 +280,5 @@ MonoBehaviour:
   health: 100
   isHit: 0
   speed: 2
-  player: {fileID: 5921787649616108760, guid: edab252d42059e94cba67f16c1b7496f, type: 3}
+  player: {fileID: 665391108036616569, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
   coinPrefab: {fileID: 4088299420659770211, guid: c6a76b580a164c944984da7abaa9f288, type: 3}
