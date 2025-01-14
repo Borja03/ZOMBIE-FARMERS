@@ -2,21 +2,28 @@ using UnityEngine;
 
 public class CoinBehav : MonoBehaviour
 {
-    public int coinValue = 1; // El valor de la moneda
-    public GameObject player; // Referencia al jugador (se puede asignar desde el inspector)
+    // Puedes agregar un valor para el tipo de coleccionable, como puntos, salud, etc.
+    public int puntos = 10;
 
-    // Este método se llama cuando otro collider entra en el trigger de la moneda
+    // Detecta cuando el jugador entra en el área del coleccionable
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica si el objeto que colisiona es el jugador
-        if (other.gameObject == player)
+        // Verifica si el objeto que entra en el trigger es el jugador (asume que tiene el tag "Player")
+        if (other.CompareTag("Player"))
         {
-            // Aquí puedes añadir lógica para incrementar el puntaje del jugador o cualquier acción deseada
-            // Por ejemplo, incrementar el puntaje del jugador:
-           
-
-            // Destruir la moneda
-            Destroy(gameObject);
+            // Llama a la función para recolectar
+            Recolectar();
         }
+    }
+
+    // Función que maneja lo que sucede cuando el coleccionable es recogido
+    private void Recolectar()
+    {
+        // Aquí puedes agregar lo que quieres que pase cuando se recoja el coleccionable
+        // Por ejemplo, sumar puntos al jugador
+        //TextCoins.Instance.AgregarPuntos(puntos);
+        Debug.Log("detectdao ajjajajaajaj");
+        // Destruye el objeto coleccionable
+        Destroy(gameObject);
     }
 }

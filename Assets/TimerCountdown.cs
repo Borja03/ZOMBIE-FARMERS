@@ -7,6 +7,7 @@ public class TimerCountdown : MonoBehaviour
     public Text countdownText; // Asocia este componente en el Inspector
     private float timeRemaining = 60f; // Duración de 1 minuto
     private bool isCountingDown = true;
+    public SubirNivel subirNivel; // Referencia a la clase SubirNivel
 
     void Update()
     {
@@ -35,6 +36,12 @@ public class TimerCountdown : MonoBehaviour
     private void OnCountdownFinished()
     {
         Debug.Log("¡Cuenta regresiva finalizada!");
-        // Aquí puedes agregar lógica adicional para cuando el countdown termine.
+        if (subirNivel != null)
+        {
+            subirNivel.IncrementarNivel(); // Llama al método para incrementar el nivel
+        }
+        // Aquí puedes reiniciar el temporizador si es necesario o detenerlo.
+        timeRemaining = 60f; // O puedes configurarlo en 60 nuevamente si quieres reiniciar
+        isCountingDown = true;
     }
 }
