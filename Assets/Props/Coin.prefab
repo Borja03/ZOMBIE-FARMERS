@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
-  player: {fileID: 4468698120124493869, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
+  player: {fileID: 4088299420659770211}
 --- !u!70 &-5363143994136965816
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

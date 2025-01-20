@@ -4377,11 +4377,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6058581330953130683, guid: 309a46ede030c024589001cf45bf4252, type: 3}
-  player: {fileID: 0}
   spawnInterval: 1
   maxEnemies: 100
   spawnAreaSize: {x: 20, y: 20}
-  restrictionAreaSize: {x: 20, y: 20}
   spawnDuration: 60
 --- !u!1 &299600629
 GameObject:
@@ -8766,6 +8764,10 @@ PrefabInstance:
     - target: {fileID: 2582155259212449480, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
       propertyPath: m_Interpolate
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582155259212449480, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4468698120124493869, guid: 00f23a1924eb1434cace871efc55cc55, type: 3}
       propertyPath: m_Name
