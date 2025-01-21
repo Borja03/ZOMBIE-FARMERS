@@ -1195,7 +1195,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uACC4\uC18D\uD558\uAE30"
+  m_Text: CONTINUE
 --- !u!222 &270145443
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1723,7 +1723,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC0BC\uC9C0\uCC3D"
+  m_Text: TRIDENT
 --- !u!222 &393625144
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1901,7 +1901,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBA54\uC778\uBA54\uB274\uB85C"
+  m_Text: TO MAIN MENU
 --- !u!222 &466768362
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11138,7 +11138,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBA54\uC778\uBA54\uB274\uB85C"
+  m_Text: TO MAIN MENU
 --- !u!222 &734913091
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11753,7 +11753,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBA54\uC778\uBA54\uB274\uB85C"
+  m_Text: MAIN MENU
 --- !u!222 &866023277
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11868,7 +11868,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC77C\uC2DC\uC815\uC9C0"
+  m_Text: PAUSE
 --- !u!222 &1015242254
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12652,11 +12652,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
-  speed: 3
+  speed: 5
   rotateSpeed: 0
   curHp: 100
   maxHp: 100
-  joy: {fileID: 0}
   spriter: {fileID: 0}
   hpBar: {fileID: 1542884625}
   bulletObj0:
@@ -12695,7 +12694,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325393994}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -13128,6 +13127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d948830d2a3692b42a517752555394dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 2
+  player: {fileID: 1325393996}
 --- !u!1 &1390550713
 GameObject:
   m_ObjectHideFlags: 0
@@ -13908,7 +13909,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB808\uBCA8\uC5C5"
+  m_Text: LEVEL UP!
 --- !u!222 &1594301138
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14451,7 +14452,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC0BC\uC9C0\uCC3D"
+  m_Text: TRIDENT
 --- !u!222 &1725015917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23888,7 +23889,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC0BC\uC9C0\uCC3D"
+  m_Text: TRIDENT
 --- !u!222 &2087816098
 CanvasRenderer:
   m_ObjectHideFlags: 0

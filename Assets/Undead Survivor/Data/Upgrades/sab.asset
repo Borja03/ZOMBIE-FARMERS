@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: sab
   m_EditorClassIdentifier: 
   upgradeType: 0
-  Name: "\uC0BD"
+  Name: SAB
   icon: {fileID: -181907988, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   WeaponNum: 0

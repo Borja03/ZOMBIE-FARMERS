@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: pistol
   m_EditorClassIdentifier: 
   upgradeType: 0
-  Name: "\uAD8C\uCD1D"
+  Name: PISTOL
   icon: {fileID: -205726582, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   WeaponNum: 3

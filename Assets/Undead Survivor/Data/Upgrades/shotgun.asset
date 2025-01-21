@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: shotgun
   m_EditorClassIdentifier: 
   upgradeType: 0
-  Name: "\uC0F7\uAC74"
+  Name: SHOTGUN
   icon: {fileID: -762074860, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   WeaponNum: 5
