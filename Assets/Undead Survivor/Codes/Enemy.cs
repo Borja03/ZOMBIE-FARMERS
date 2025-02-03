@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
 
-
     bool isLive;
 
     Rigidbody2D rigid;
@@ -21,14 +20,17 @@ public class Enemy : MonoBehaviour
     [SerializeField] int experience_reward = 400;
 
     public GameObject hudDamageText;
+    public AudioClip hitSound;
+    private AudioSource audioSource;
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (!isLive)
@@ -66,25 +68,35 @@ public class Enemy : MonoBehaviour
     void OnHit(int dmg)
     {
         health -= dmg;
+
+        // Reproducir el sonido del golpe
+        if (hitSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(hitSound);
+        }
+
         GameObject hudText = Instantiate(hudDamageText);
         hudText.transform.position = transform.position + new Vector3(0, 1, 0);
         hudText.GetComponent<DamageText>().damage = dmg;
-        //hit anim ���� ���� �ڵ� �ʿ�
-        if(health <= 0)
+
+        // Animación y lógica de muerte
+        if (health <= 0)
         {
             anim.SetBool("Dead", true);
             speed = 0;
             Invoke("Dead", 0.2f);
         }
     }
+
     void Dead()
     {
         target.GetComponent<Level>().AddExperience(experience_reward);
         gameObject.SetActive(false);
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Bullet")
         {
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             OnHit(bullet.dmg);
