@@ -436,6 +436,7 @@ GameObject:
   - component: {fileID: 56916134}
   - component: {fileID: 56916136}
   - component: {fileID: 56916135}
+  - component: {fileID: 56916137}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
@@ -502,6 +503,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56916133}
   m_CullTransparentMesh: 1
+--- !u!114 &56916137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56916133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce983abce72b35d4b9df2bbc6de45534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winAudioClip: {fileID: 8300000, guid: 6167be1b557ef4b48a181f2d423ca68d, type: 3}
 --- !u!1 &85380761
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,6 +733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletNum: 0
   dmg: 5
+  speed: 20
+  rb: {fileID: 0}
 --- !u!50 &140099739
 Rigidbody2D:
   serializedVersion: 5
@@ -2060,7 +2076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417970807}
   - component: {fileID: 417970806}
-  - component: {fileID: 417970805}
+  - component: {fileID: 417970808}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2068,26 +2084,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &417970805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 417970804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &417970806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2118,6 +2114,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &417970808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417970804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!1 &456493175
 GameObject:
   m_ObjectHideFlags: 0
@@ -11794,6 +11821,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletNum: 0
   dmg: 5
+  speed: 20
+  rb: {fileID: 0}
 --- !u!50 &844067815
 Rigidbody2D:
   serializedVersion: 5
@@ -12387,6 +12416,7 @@ GameObject:
   - component: {fileID: 1129636613}
   - component: {fileID: 1129636612}
   - component: {fileID: 1129636611}
+  - component: {fileID: 1129636614}
   m_Layer: 5
   m_Name: SurvivedPanel
   m_TagString: Untagged
@@ -12453,6 +12483,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 800, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1129636614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129636610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a2844ca12097c4f9b4862f76137726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winAudioClip: {fileID: 8300000, guid: aebc220776374a14c8873cc12d10e6d6, type: 3}
 --- !u!1 &1139332036
 GameObject:
   m_ObjectHideFlags: 0
@@ -13330,7 +13373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1366411485}
-  bulletPrefab: {fileID: 303787239949151798, guid: 763cec0a49482af45bf388e7a70b952d, type: 3}
+  bulletPrefab: {fileID: 48343134948379166, guid: 56e1428be815d5f45a70c5152958ca28, type: 3}
 --- !u!1 &1342672471
 GameObject:
   m_ObjectHideFlags: 0
@@ -13571,6 +13614,7 @@ MonoBehaviour:
   - {fileID: 338432584}
   - {fileID: 1278284920}
   - {fileID: 317198464}
+  upgradeAudioClip: {fileID: 8300000, guid: 199e6d94457186344a7c915704a5653d, type: 3}
 --- !u!114 &1358624622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13870,6 +13914,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletNum: 0
   dmg: 5
+  speed: 20
+  rb: {fileID: 0}
 --- !u!50 &1408030652
 Rigidbody2D:
   serializedVersion: 5
@@ -14676,6 +14722,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletNum: 0
   dmg: 5
+  speed: 20
+  rb: {fileID: 0}
 --- !u!50 &1625216547
 Rigidbody2D:
   serializedVersion: 5
@@ -23963,6 +24011,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletNum: 0
   dmg: 5
+  speed: 20
+  rb: {fileID: 0}
 --- !u!50 &1951670335
 Rigidbody2D:
   serializedVersion: 5
@@ -24567,6 +24617,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletNum: 0
   dmg: 5
+  speed: 20
+  rb: {fileID: 0}
 --- !u!50 &2133681779
 Rigidbody2D:
   serializedVersion: 5
